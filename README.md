@@ -1,3 +1,9 @@
+# A simple Sudoku built with React
+
+Author: Wojciech Jedynak 2019
+
+# Boilerplate README follows...
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
