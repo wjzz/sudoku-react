@@ -33,7 +33,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### npm run deploy
+### `npm run deploy`
 
 To publish it at https://wjzz.github.io/sudoku-react, run:
 
