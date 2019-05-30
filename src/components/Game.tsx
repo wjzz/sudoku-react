@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Banner from "./Banner";
-import Board, { CalculationState } from "./Board";
+import BoardContainer from "./BoardContainer";
 
 import "../App.css";
 
-import { CellContent, CellIndex, Puzzle, CellDigit } from "../Types";
+import { CellContent, CellIndex, Puzzle, CellDigit, CalculationState } from "../Types";
 import { generateRandomPuzzle } from "../Utils";
 import { examplePuzzle, examplePuzzle2, validateSudoku, findCandidates } from "../Sudoku";
 
@@ -132,7 +132,7 @@ class Game extends Component<Props, State>{
                     handleInitial={this.handleInitial}
                     validation={validateSudoku(this.state.puzzle)}
                 />
-                <Board 
+                <BoardContainer 
                     puzzle={this.state.puzzle} 
                     handleCellClick={idx => 1}
                     //handleCellClick={this.handleCellClick} 

@@ -32,6 +32,14 @@ export function examplePuzzle2() : Puzzle {
     ];
 }
 
+/// Checks if the given puzzle is solved
+export function isPuzzleSolved(puzzle: Readonly<Puzzle>): boolean {
+    const no_nulls = puzzle.every( row =>
+        row.every (value => 
+            value !== null));
+    return no_nulls && validateSudoku(puzzle);
+}
+
 /// Checks if the given (perhaps partially solved) puzzle contains
 /// no contradictions, ie. all the sudoku conditions are OK
 export function validateSudoku (puzzle: Readonly<Puzzle>) : boolean {

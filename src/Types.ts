@@ -10,3 +10,10 @@ export interface CellIndex {
     row: number;
     col: number;
 }
+
+export interface CalculationState {
+    readonly currentIndex: CellIndex | null;
+    readonly calculationStarted: boolean;
+    readonly indexesDone: CellIndex[];
+    readonly indexesTodo: CellIndex[];
+}
