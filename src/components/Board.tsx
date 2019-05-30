@@ -1,5 +1,5 @@
 import React from "react";
-import Cell from "./Cell";
+import Square from "./Square";
 import "../App.css";
 import { CellIndex, CellContent } from "../Types";
 
@@ -22,32 +22,13 @@ const Board: React.FC<Props> = (props: Props) => {
 
     for (let row = 0; row < 3; ++row){
         for (let col = 0; col < 3; ++col){
-            const cells = [];
-            for (let i = 0; i < 3; ++i){
-                for (let j = 0; j < 3; ++j){
-                    const cell_row = 3*row + i;
-                    const cell_col = 3*col + j;
-                    const value = props.puzzle[cell_row][cell_col];
-                    const idx = {row: cell_row, col: cell_col};
-                    let isCurrent = false;
-                    if (props.calculation.currentIndex){
-                        const {row: curr_row, col: curr_col} = props.calculation.currentIndex;
-                        if ((curr_row === cell_row) && (curr_col === cell_col)){
-                            isCurrent = true;
-                        }
-                    }
-                    cells.push(<Cell 
-                        current = {isCurrent}
-                        idx = {idx}
-                        value = {value}
-                        key = {`${cell_row}${cell_col}`}
-                        clickHandler = {props.handleCellClick}
-                    />);
-                }
-            }
-            squares.push(<div className="square" key={`${row}${col}`}>
-                {cells}
-            </div>);
+            squares.push(<Square 
+                row={row}
+                col={col}
+                puzzle={props.puzzle}
+                currentIndex={props.calculation.currentIndex}
+                handleCellClick={props.handleCellClick}
+                />);
         }
     }
 
