@@ -1,4 +1,4 @@
-# A simple Sudoku built with React
+# A simple Sudoku built with React and TypeScript
 
 Author: Wojciech Jedynak 2019
 
