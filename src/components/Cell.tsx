@@ -21,5 +21,4 @@ const Cell = (props: CellProps) => {
     );
 }
 
-
 export default Cell;

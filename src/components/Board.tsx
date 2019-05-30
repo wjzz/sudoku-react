@@ -11,7 +11,7 @@ export interface CalculationState {
 }
 
 interface Props {
-    readonly values: CellContent[][];
+    readonly puzzle: CellContent[][];
     handleCellClick(idx: CellIndex): void;
     handleCalculate(): void;
     readonly calculation: CalculationState;
@@ -27,7 +27,7 @@ const Board: React.FC<Props> = (props: Props) => {
                 for (let j = 0; j < 3; ++j){
                     const cell_row = 3*row + i;
                     const cell_col = 3*col + j;
-                    const value = props.values[cell_row][cell_col];
+                    const value = props.puzzle[cell_row][cell_col];
                     const idx = {row: cell_row, col: cell_col};
                     let isCurrent = false;
                     if (props.calculation.currentIndex){

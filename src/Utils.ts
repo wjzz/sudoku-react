@@ -1,9 +1,8 @@
-import { CellDigit } from "./Types";
+import { CellDigit, Puzzle } from "./Types";
 
 /// Some helper functions
 
-/// Returns a random integer in the [min, max]
-/// interval
+/// Returns a random integer in the [min, max] interval
 function randInt(min: number, max: number) : number {
     console.assert (min < max);
     console.assert (0 <= min);
@@ -23,13 +22,13 @@ function randCellDigit(): CellDigit {
 
 // TODO: add unit tests for randInt and randCellDigit
 
-export function generateRandomValues(): CellDigit[][] {
-    const values : CellDigit[][] = [];
+export function generateRandomPuzzle(): Puzzle {
+    const puzzle : Puzzle = [];
     for (let row = 0; row < 9; ++row){
-        values[row] = [];
+        puzzle[row] = [];
         for (let col = 0; col < 9; ++col){
-            values[row][col] = randCellDigit();
+            puzzle[row][col] = randCellDigit();
         }
     }
-    return values;
+    return puzzle;
 }
