@@ -35,7 +35,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run deploy`
 
-To publish it at https://wjzz.github.io/sudoku-react, run:
+Publishes the project at https://wjzz.github.io/sudoku-react.
 
 ### `npm run eject`
 
