@@ -15,6 +15,7 @@ const Board: React.FC<Props> = (props: Props) => {
     for (let row = 0; row < 3; ++row){
         for (let col = 0; col < 3; ++col){
             squares.push(<Square 
+                key={`${row}${col}`}
                 row={row}
                 col={col}
                 puzzle={props.puzzle}
